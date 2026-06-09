@@ -32,6 +32,9 @@ def main():
                 z = calculator.divide(x, y)
                 calculator.print_result(z)
             case 5:
+                print("Running expression evaluator")
+                calculator.evaluate_expression(input("Enter math expression: "))
+            case -1:
                 print("Exiting calculator app.")
                 exit_menu = True
             case _:

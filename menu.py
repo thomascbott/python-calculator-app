@@ -4,7 +4,8 @@ def display_menu():
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
-    print("5. Exit Calculator")
+    print("5. Evaluate Expression")
+    print("-1. Exit Calculator")
 
 #
 # def menuLoop:

@@ -25,9 +25,16 @@ def divide(x, y):
 
 def evaluate_expression(expression: str):
     # use a list as a stack
-    stack = []
+    stack_operators = []
+    stack_nums = []
 
-    while not stack:
-        # split the string into a list of substrings
-        expression = expression.split()
-        
+    # # split the string into a list of substrings
+    expression = expression.split()
+    #
+    # # testing reading each substring (should be only a character each for valid input)
+    # for char in expression:
+    #     print(char)
+
+    while stack_nums or stack_operators:
+
+
