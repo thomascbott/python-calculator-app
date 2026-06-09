@@ -1,4 +1,4 @@
-
+import calculator
 import menu
 
 
@@ -7,12 +7,14 @@ def main():
 
     # menu loops until user exits
     while not exit_menu:
-        menu.displayMenu()
+        menu.display_menu()
         user_selection = int(input("\nEnter your menu selection: "))
 
         match user_selection:
             case 1:
-                print("1 selected")
+                x, y = calculator.get_two_numbers()
+                z = calculator.add(x, y)
+                calculator.print_result(z)
             case 2:
                 print("2 selected")
             case 3:
