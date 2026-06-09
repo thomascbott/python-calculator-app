@@ -20,3 +20,14 @@ def divide(x, y):
     if y == 0:
         return "Undefined: Division by zero"
     return x / y
+
+# expression evaluator
+
+def evaluate_expression(expression: str):
+    # use a list as a stack
+    stack = []
+
+    while not stack:
+        # split the string into a list of substrings
+        expression = expression.split()
+        
