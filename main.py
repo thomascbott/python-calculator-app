@@ -1,6 +1,8 @@
+import menu
+
 
 def main():
-    x = 2 + 3
+    menu.displayMenu()
 
 
 if __name__ == '__main__':
