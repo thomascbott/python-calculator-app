@@ -1,4 +1,7 @@
 # Helper Methods
+from operator import truediv
+
+
 def get_two_numbers():
     x, y = input("Give two numbers separated by a space: ").split()
     return float(x), float(y)
@@ -27,6 +30,7 @@ def evaluate_expression(expression: str):
     # use a list as a stack
     stack_operators = []
     stack_nums = []
+    counter = 0
 
     # # split the string into a list of substrings
     expression = expression.split()
@@ -36,5 +40,30 @@ def evaluate_expression(expression: str):
     #     print(char)
 
     while stack_nums or stack_operators:
+        #check if operator
+        if is_operator(expression[counter]):
+            stack_operators.append(expression[counter])
+        # check if number
+        elif isinstance(expression[counter], (int, float)):
+            stack_nums.append(expression[counter])
 
+
+# expression evaluator Helper Methods
+
+def is_operator(operator) -> bool:
+    match operator:
+        case '(':
+            return True
+        case ')':
+            return True
+        case '+':
+            return True
+        case '-':
+            return True
+        case '*':
+            return True
+        case '/':
+            return True
+        case _:
+            return False
 
