@@ -12,15 +12,25 @@ def main():
 
         match user_selection:
             case 1:
+                # basic addition
                 x, y = calculator.get_two_numbers()
                 z = calculator.add(x, y)
                 calculator.print_result(z)
             case 2:
-                print("2 selected")
+                # basic subtraction
+                x, y = calculator.get_two_numbers()
+                z = calculator.subtract(x, y)
+                calculator.print_result(z)
             case 3:
-                print("3 selected")
+                # basic multiplication
+                x, y = calculator.get_two_numbers()
+                z = calculator.multiply(x, y)
+                calculator.print_result(z)
             case 4:
-                print("4 selected")
+                # basic division
+                x, y = calculator.get_two_numbers()
+                z = calculator.divide(x, y)
+                calculator.print_result(z)
             case 5:
                 print("Exiting calculator app.")
                 exit_menu = True
